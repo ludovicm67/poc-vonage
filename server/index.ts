@@ -4,6 +4,12 @@ const fastify = Fastify({ logger: true });
 const port = 8080;
 const host = "0.0.0.0";
 
+fastify.get('/', (): any => {
+  return {
+    hello: "world",
+  }
+});
+
 const start = async () => {
   try {
     await fastify.listen(port, host);
