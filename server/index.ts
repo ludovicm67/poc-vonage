@@ -7,7 +7,11 @@ const host = "0.0.0.0";
 fastify.get('/', (): any => {
   return {
     hello: "world",
-  }
+  };
+});
+
+fastify.get('/healthz', (): any => {
+  return "OK";
 });
 
 const start = async () => {
