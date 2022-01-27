@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^14.3.2",
+    "fastify": "^3.27.0",
     "opentok": "^2.12.1",
     "typescript": "^4.5.5"
   },
