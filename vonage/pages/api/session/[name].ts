@@ -11,7 +11,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const name = "SessionName";
+  const name = req.query?.name as string;
   const d = new Date();
   if (!sessions.has(name)) {
     sessions.set(name, d.toISOString());
