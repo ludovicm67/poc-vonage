@@ -10,6 +10,7 @@ const newSession = async (): Promise<string> => {
   const sessionId: string = await new Promise((resolve, reject) => {
     opentok.createSession({
       archiveMode: 'manual',
+      mediaMode: 'relayed',
     }, (err, session) => {
       // if there was an error, return it, and exit
       if (err) {
