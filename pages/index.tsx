@@ -18,11 +18,6 @@ const Home: NextPage = () => {
         </h1>
 
         <HomePage />
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
       </main>
     </div>
   );
