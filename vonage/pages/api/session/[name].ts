@@ -38,6 +38,7 @@ type Data = {
   name: string,
   id: string,
   token: string,
+  key: string,
 };
 
 const sessions = new Map();
@@ -52,5 +53,5 @@ export default async function handler(
   }
   const sessionId = sessions.get(name);
   const token = newToken(sessionId);
-  res.status(200).json({ name, id: sessionId, token });
+  res.status(200).json({ name, id: sessionId, token, key: apiKey });
 }
