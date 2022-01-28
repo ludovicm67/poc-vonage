@@ -1,6 +1,6 @@
 # Vonage POC
 
-This is a proof of concept using Vonage API.
+This is a proof of concept using Vonage SDK.
 
 ## Quick start
 
