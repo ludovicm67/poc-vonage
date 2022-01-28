@@ -30,9 +30,14 @@ const newSession = async (): Promise<string> => {
   return sessionId;
 };
 
+const newToken = (sessionId: string): string => {
+  return opentok.generateToken(sessionId);
+};
+
 type Data = {
   name: string,
   id: string,
+  token: string,
 };
 
 const sessions = new Map();
@@ -46,5 +51,6 @@ export default async function handler(
     sessions.set(name, await newSession());
   }
   const sessionId = sessions.get(name);
-  res.status(200).json({ name, id: sessionId });
+  const token = newToken(sessionId);
+  res.status(200).json({ name, id: sessionId, token });
 }
