@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.client {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#publisher,
+#subscriber {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}

@@ -64,7 +64,7 @@ const Client = (props: ClientProps) => {
   }, []);
 
   return (
-    <div>
+    <div className="client">
       <div id="publisher"></div>
       <div id="subscriber"></div>
     </div>
